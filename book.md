@@ -39,5 +39,16 @@
 
 https://github.com/expressjs/morgan
 
+### express 中间件原理
+
+### 项目启动前注意
+1. 启动mysql
+2. 启动redis
+3. 启动后端服务
+blog-koa2
+4. 启动前端服务
+html-test
+5. 本地访问localhost:8080
+
 
 
