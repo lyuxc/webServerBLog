@@ -6,7 +6,7 @@ const loginCheck = require('../middleware/loginCheck')
 router.prefix('/api/blog')
 
 router.get('/list', async function (ctx, next) {
-  console.log('author', ctx.session.realname)
+  console.log('author---', ctx.session.realname)
   let author = ctx.query.author || ''
   const keyword = ctx.query.keyword || ''
 

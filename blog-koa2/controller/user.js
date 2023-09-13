@@ -25,6 +25,18 @@ const login = async (username, password) => {
     // return false
 }
 
+const create = async (username, realname) => {
+    console.info('controller-user:', username, realname)
+    const sql = `
+        insert into users (username, password, realname) values ('${username}', 111111, '${realname}');
+    `
+    const insertData = await exec(sql)
+    return {
+        id: insertData.insertId
+    }
+}
+
 module.exports = {
-    login
+    login,
+    create
 }
