@@ -20,6 +20,38 @@ router.post('/login', async function (ctx, next) {
     ctx.body = new ErrorModel('账号或者密码错误!!')
 })
 
+router.get('/detail', async function(ctx, next) {
+    ctx.body = {
+        data: {
+            getPhone: true, // 用户未登录true 已登陆false
+            userInfo: {
+                avatarUrl: 'GGbang',
+                balance: 0,
+                grade: {
+                    name: 'gradegradegrade'
+                },
+                mobile: '13588887788'
+            }
+        }
+    }
+})
+
+router.get('/detailsss', async function(ctx, next) {
+    ctx.body = {
+        data: {
+            getPhone: true, // 用户未登录true 已登陆false
+            userInfo: {
+                avatarUrl: 'GGbang',
+                balance: 0,
+                grade: {
+                    name: 'gradegradegrade'
+                },
+                mobile: '13588887788'
+            }
+        }
+    }
+})
+
 router.post('/create', async function (ctx, next) {
     const { username, realname } = ctx.request.body
     const data = await create(username, realname)

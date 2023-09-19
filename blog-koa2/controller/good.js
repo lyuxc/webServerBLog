@@ -30,10 +30,10 @@ const getGoodList = async (id) => {
 }
 
 const addGood = async (body) => {
-    const { good_name, category_id, price, original_price, quantity } = body
+    const { good_name, category_id, price, original_price, quantity, product_image } = body
     let sql = `
-        INSERT INTO tb_goods (goods_name, quantity, price, original_price, category_id)
-        VALUES ('${good_name}', '${quantity}', '${price}', '${original_price}', '${category_id}');
+        INSERT INTO tb_goods (goods_name, quantity, price, original_price, category_id, product_image)
+        VALUES ('${good_name}', '${quantity}', '${price}', '${original_price}', '${category_id}', '${product_image}' );
     `
     const addRes = await exec(sql)
     return {
